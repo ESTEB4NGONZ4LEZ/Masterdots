@@ -29,23 +29,27 @@
             </header>
             <!--FORM-->
             <main>
-                <form action="#">
+                <form action="juego.html" id="formEntrada">
                     <div class="itemForm">
                         <label for="nick">Introduce tu nick</label>
                         <input type="text" name="nick" value="@" id="nicka" readonly> <!-- readonly le dice al navegador que el input es lo para lectura, no se puede modificar -->
                         <input type="text" name="nick" id="nick">
                     </div>
                     <div class="itemForm">
+                        <label for="email">Correo Electronico</label>
+                        <input type="email" name="email" id="email" placeholder="yo@iam.es">
+                    </div>
+                    <div class="itemForm">
                         <label for="tamano">Tamano del Juego</label>
                         <select name="tamano" id="tamano">
-                            <option value="">--Elige un Tamano--</option>
+                            <option value="0">--Elige un Tamano--</option>
                             <option value="1">4x4</option>
                             <option value="2">5x5</option>
                             <option value="3">6x6</option>
                         </select>
                     </div>
                     <div class="itemForm">
-                        <input type="submit" value="JUGAR">
+                        <input type="submit" value="JUGAR" id="jugar">
                     </div>
                 </form>
             </main>
