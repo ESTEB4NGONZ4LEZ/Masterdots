@@ -12,16 +12,17 @@ function comprobarForm(event){
         console.log("No hay Nick");
         nickInput.focus();
         event.preventDefault();
-        error.innerText = "El campo de nick no puede empezar con un numero" 
+        error.innerText = "El campo de nick no puede empezar con un numero";
         return false;
     } else if (tamanoInput.value == "0")
     {
         console.log("No se ha seleccionado el tamano del panel");
         tamanoInput.focus();
         event.preventDefault();
-        error.innerText = "El campo de tamaño del juego no puede estar vacio"
+        error.innerText = "El campo de tamaño del juego no puede estar vacio";
         return false;
     }
+    datosUsuario(nickInput);
     return true;
 }
 
