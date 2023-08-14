@@ -23,3 +23,30 @@ function comporacionDatosUsuario(){
     }
     return true;
 }
+
+// Funcion para almacenar los datos del usuario en el localStorage y ademas convertirlo a formato JSON
+function historicoUsuario(nick){
+    // Creamos una  variable en la que almacenaremos el historial de registros.
+    let historicoStorage = localStorage.getItem("historico");
+    let historico;
+
+    // Creamos un condicional en donde evaluaremos si existe el historico.
+    if(historicoStorage == null){
+        // Si no existe lo crea.
+        historico = [];
+    } else{
+        // Si existe lo convierte a json.
+        historico = JSON.parse(historicoStorage);
+    }
+
+    // Guardamos el nuevo registro dentro de una variable.
+    let registroUsuario = {
+        usuario : nick.value,
+        fecha : Date.now()
+    }
+
+    // Subimos el nuevo registro a el historico.
+    historico.push(registroUsuario);
+    // Guardamos el historico dentro del localStorage.
+    localStorage.setItem("historico", JSON.stringify(historico));
+}

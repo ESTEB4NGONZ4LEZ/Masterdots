@@ -32,6 +32,7 @@ function comprobarForm(event){
     }
     // Le pasamos el nick a la fucion para crear la sessionStorage del usuario.
     datosUsuario(nickInput);
+    historicoUsuario(nickInput);
     return true;
 }
 
